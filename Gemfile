@@ -55,3 +55,5 @@ gem "shakapacker", "= 6.6"
 
 gem 'devise'
 gem 'devise-bootstrap-views'
+
+gem 'truemail'
