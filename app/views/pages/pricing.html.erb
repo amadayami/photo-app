@@ -1,10 +1,15 @@
 <% if current_user %>
   <h3>Welcome: <%= current_user.email %></h3>
-<% else %>
-  <div class="jumbotron">
+<% end %>
+
+<div class="jumbotron">
     <h2>Photo App Pricing</h2>
     <p class="lead">
-      You'll love managing your Photos with our application. Sign up!
+      <% if current_user %>
+        Change your plan below!
+      <% else %>
+        You'll love managing your Photos with our application. Sign up!
+      <% end %>
     </p>
   </div>
   <div class="row">
@@ -44,4 +49,3 @@
       </div>
     </div>
   </div>
-<% end %>
