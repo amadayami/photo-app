@@ -87,6 +87,10 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-bootstrap-views (1.1.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -204,6 +208,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2-x86_64-linux)
+    stripe (8.5.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -242,6 +247,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   devise-bootstrap-views
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
@@ -252,6 +258,7 @@ DEPENDENCIES
   shakapacker (= 6.6)
   spring
   sqlite3 (~> 1.4)
+  stripe
   truemail
   tzinfo-data
   web-console (>= 4.1.0)
