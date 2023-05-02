@@ -1,4 +1,4 @@
-$(document).on('ready turbolinks:load', function(){
+function initStripe(){
   console.log('BLORBO')
   var show_error, stripeResponseHandler, submitHandler;
 
@@ -42,4 +42,7 @@ $(document).on('ready turbolinks:load', function(){
     
     return false;
     };
-})
+}
+
+$(initStripe);
+$(document).on('turbolinks:load', initStripe);
