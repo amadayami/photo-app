@@ -1,4 +1,5 @@
 $(document).on('ready turbolinks:load', function(){
+  console.log('BLORBO')
   var show_error, stripeResponseHandler, submitHandler;
 
   submitHandler = function (event) {

@@ -13,9 +13,11 @@ class RegistrationsController < Devise::RegistrationsController
           @payment.process_payment
           @payment.save
         rescue Exception => e
-          flash[:error] = e.message
+          flash[:error] = "There was a problem: #{e.message}"
           resource.destroy
-          puts 'Payment Failed'
+          puts "Payment Failed: #{e.message}"
+          puts params[:payment]["token"].inspect
+          puts pp params.to_unsafe_h
           render :new and return
         end
         if resource.active_for_authentication?
